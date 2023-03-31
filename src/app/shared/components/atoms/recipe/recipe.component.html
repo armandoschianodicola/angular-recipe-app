@@ -1,1 +1,6 @@
-<p>{{item.name}}</p>
+<div (click)="recipeWasSelected(item)" class="card-container">
+    <p>{{ item.name }}</p>
+    <app-recipe-detail [item]="item">
+
+  </app-recipe-detail>
+</div>

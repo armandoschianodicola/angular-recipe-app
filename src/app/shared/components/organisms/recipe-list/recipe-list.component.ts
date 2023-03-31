@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-list',
@@ -7,5 +8,13 @@ import { Component, Input } from '@angular/core';
 })
 export class RecipeListComponent {
   @Input() items: any[] = []
+  
+  constructor(
+    private router: Router
+  ) { }
+
+  selected(e: any) {
+    this.router.navigate(['/recipe', e.id])
+  }
 
 }

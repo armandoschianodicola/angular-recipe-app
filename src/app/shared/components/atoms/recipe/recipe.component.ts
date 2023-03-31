@@ -9,7 +9,7 @@ export class RecipeComponent {
   @Input() item: any = {}
   @Output() selected = new EventEmitter<any>()
 
-  recipeWasSelected() {
+  recipeWasSelected(item: any) {
     this.selected.emit(this.item)
   }
 

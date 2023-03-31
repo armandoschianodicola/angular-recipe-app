@@ -1,1 +1,10 @@
-<app-recipe *ngFor="let item of items" [item]="item"> </app-recipe>
+<div class="container">
+  <div class="recipes">
+    <app-recipe
+      *ngFor="let item of items"
+      [item]="item"
+      (selected)="selected($event)"
+    >
+    </app-recipe>
+  </div>
+</div>
