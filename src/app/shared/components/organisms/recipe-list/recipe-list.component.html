@@ -1,10 +1,11 @@
 <div class="container">
   <div class="recipes">
-    <app-recipe
+    <app-recipe-card
       *ngFor="let item of items"
       [item]="item"
       (selected)="selected($event)"
+      routerLink="/recipe/{{ item.id }}"
     >
-    </app-recipe>
+    </app-recipe-card>
   </div>
 </div>

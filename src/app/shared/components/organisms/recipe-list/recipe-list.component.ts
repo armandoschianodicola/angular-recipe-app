@@ -14,7 +14,8 @@ export class RecipeListComponent {
   ) { }
 
   selected(e: any) {
-    this.router.navigate(['/recipe', e.id])
+      // this.router.navigate(['/recipe', e.id], e)
+    this.router.navigateByUrl(`/recipe/${e.id}`, { state: e })
   }
 
 }
