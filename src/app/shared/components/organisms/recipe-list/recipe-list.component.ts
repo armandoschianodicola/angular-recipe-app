@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./recipe-list.component.scss']
 })
 export class RecipeListComponent {
-  @Input() items: any[] = []
+  @Input() items: {id: number}[] = []
   
   constructor(
     private router: Router
